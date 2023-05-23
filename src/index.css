@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.skeleton-loader div,
+.skeleton-loader article {
+  animation: anims 1s ease-in infinite alternate-reverse forwards;
+}
+
+@keyframes anims {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+.like-container svg {
+  top: 100%;
+  animation: fadeup 5s ease-in forwards;
+}
+@keyframes fadeup {
+  0% {
+    opacity: 1;
+    top: 100%;
+  }
+  100% {
+    opacity: 0;
+    top: 0;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.item:nth-child(odd) img {
+  animation: slideInFromLeft 0.7s ease-in-out;
+}
+.item:nth-child(even) img {
+  animation: slideInFromRight 0.7s ease-in-out;
+}
+
+.bg_home {
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(44, 176, 237, 1) 38%,
+    rgba(255, 193, 7, 1) 99%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(44, 176, 237, 1) 38%,
+    rgba(255, 193, 7, 1) 99%
+  );
+
+  /* opera 11.10+ */
+  background: -o-linear-gradient(
+    90deg,
+    rgba(44, 176, 237, 1) 38%,
+    rgba(255, 193, 7, 1) 99%
+  );
+
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFC107', endColorstr='#2CB0ED', GradientType=0 );
+
+  /* ie 10+ */
+  background: -ms-linear-gradient(
+    90deg,
+    rgba(44, 176, 237, 1) 38%,
+    rgba(255, 193, 7, 1) 99%
+  );
+
+  /* global 94%+ browsers support */
+  background: linear-gradient(
+    90deg,
+    rgba(44, 176, 237, 1) 38%,
+    rgba(255, 193, 7, 1) 99%
+  );
+}
+
+@layer utilities {
+  .active-cart-btn {
+    @apply border-b-[#2F4333] border-b-2 text-[#292929] font-medium;
+  }
+}
+
+.auction-card-wrapper:hover .auction-card {
+  width: 80% !important;
+  height: 90% !important;
+}
+.auction-card-wrapper:hover .auction-join {
+  opacity: 1 !important;
+}
