@@ -191,7 +191,7 @@ function PaymentCheckout() {
                   </label>
                 </InputWrapper>
               </section>
-              <button className="bg-[blue] h-[3.5rem] px-8 text-xl mb-5 font-medium text-white block w-full mt-10 w-[80%] mx-auto md:w-full">
+              <button className="bg-[blue] h-[3.5rem] px-8 text-xl mb-5 font-medium text-white block mt-10 w-[80%] mx-auto md:w-full">
                 Confirm
               </button>
             </form>

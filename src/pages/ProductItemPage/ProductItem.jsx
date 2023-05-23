@@ -168,7 +168,7 @@ function ProductItem() {
                   <button className="border h-[3.5rem] border-grey px-3 ml-4">
                     <svg
                       onClick={() => toggleFavorite(productId)}
-                      className="h-[25px] w-[27px] md:h-[42px] w-[34px]"
+                      className="h-[25px]  md:h-[42px] w-[34px]"
                       width="49"
                       height="34"
                       viewBox="0 0 49 34"

@@ -10,6 +10,7 @@ function CartShippingDetails() {
   const checkoutForm = useRef();
   const { setName } = useContext(Context);
   const navigate = useNavigate();
+  const [formError, setFormError] = useState("");
   const [formData, setFormData] = useState({
     email: "",
     checkbox: false,
@@ -23,17 +24,6 @@ function CartShippingDetails() {
 
   function handleSubmit(e) {
     e.preventDefault();
-
-    if (
-      !formData.email ||
-      !formData.checkbox ||
-      !formData.name ||
-      !formData.wallet
-    ) {
-      setFormError("Please fill in all the fields correctly.");
-      return;
-    }
-
     setName(formData.name);
     navigate("/checkout");
   }
@@ -62,7 +52,7 @@ function CartShippingDetails() {
   }, []);
 
   return (
-    <div className={`max-w-[1064px] px-4 md:px-0 mx-auto pb-8 mt-20`}>
+    <div className={`max-w-[1064px] px-4 md:px-0 mx-auto pb-8 my-20`}>
       <p className="font-medium text-[#BCB7B7] md:hidden mb-8">
         Home/ Marketplace/ Cart/ <span className="text-grey">Shipping</span>
       </p>
